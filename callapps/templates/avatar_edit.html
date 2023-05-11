@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    更改头像
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        {#面板#}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">更改头像</h3>
+            </div>
+            <div class="panel-body">
+                {#表单#}
+                <form method="post" novalidate enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" name="avatar">
+                    <br>
+                    <button type="submit" class="btn btn-primary">提 交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

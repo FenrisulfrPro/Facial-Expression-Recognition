@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+    <style>
+        table, th, td {
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div style="margin-bottom: 20px">
+            <input type="button" value="表情识别" class="btn btn-success" onclick="window.location.href='/call/'"> {# 点击按钮打开GUI #}
+        </div>
+    <p>请告知来访者摘下<mark>眼镜和口罩等，露出整个面部</mark> 识别效果更佳</p>
+    </div>
+{% endblock content %}
